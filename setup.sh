@@ -10,7 +10,7 @@ domain=$(cat /etc/xray/domain)
 date=$(date +"%Y-%m-%d")
 
 #link izin ip vps
-url_izin='https://raw.githubusercontent.com/FanoraSsh/script/main/ip'
+url_izin='https://raw.githubusercontent.com/fanoraprem/script/main/ip'
 
 # Mendapatkan IP VPS saat ini
 ip_vps=$(curl ipinfo.io/ip)
@@ -190,10 +190,10 @@ mkdir -p /var/lib >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/FanoraSsh/v/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/fanoraprem/v/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-wget -q https://raw.githubusercontent.com/FanoraSsh/v/main/api;chmod +x api;./api
+wget -q https://raw.githubusercontent.com/fanoraprem/v/main/api;chmod +x api;./api
 clear
 clear
 read -rp "Input your subdomain : " -e pp
@@ -216,25 +216,25 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/FanoraSsh/a/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/fanoraprem/a/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install ssh UDP
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH UDP CUSTOM               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/FanoraSsh/UDP/main/udp.sh && chmod +x udp.sh && ./udp.sh
+wget https://raw.githubusercontent.com/fanoraprem/UDP/main/udp.sh && chmod +x udp.sh && ./udp.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green       Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/FanoraSsh/a/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/fanoraprem/a/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
-wget https://raw.githubusercontent.com/FanoraSsh/a/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/fanoraprem/a/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-wget https://raw.githubusercontent.com/FanoraSsh/v/main/wireguard/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+wget https://raw.githubusercontent.com/fanoraprem/v/main/wireguard/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 sleep 3
 clear
