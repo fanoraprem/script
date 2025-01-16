@@ -1,6 +1,6 @@
 #!/bin/bash
 #FN
-#RERECHAN02
+#fanoraprem
 #indo-ssh.com
 #
 xp
@@ -12,7 +12,7 @@ tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
 fram=$(free -m | awk 'NR==2 {print $4}')
 #link izin ip vps
-url_izin='https://raw.githubusercontent.com/FanoraSsh/iziznscript/main/ip'
+url_izin='https://raw.githubusercontent.com/fanoraprem/iziznscript/main/ip'
 
 # Mendapatkan IP VPS saat ini
 ip_vps=$(curl -s ifconfig.me)
@@ -39,7 +39,7 @@ if [[ -n "$izin" ]]; then
 
   # Memeriksa apakah IP VPS ditemukan dalam izin.txt
   if [[ "$ipvps" != "$ip_vps" ]]; then
-    echo "3.1.195.124 ON izin.txt"
+    echo "IP VPS tidak ditemukan dalam izin.txt"
     exit 0
   fi
 else
