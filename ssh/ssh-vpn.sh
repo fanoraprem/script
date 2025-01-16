@@ -20,7 +20,7 @@ commonname=none
 email=rere@gmail.com
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/FanoraSsh/a/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/fanoraprem/a/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -128,10 +128,10 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 rm /etc/nginx/conf.d/vps.conf
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/FanoraSsh/v/main/tarong/ssh/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/fanoraprem/v/main/tarong/ssh/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
@@ -233,13 +233,13 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/fanoraprem/v/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -259,27 +259,27 @@ netfilter-persistent save
 netfilter-persistent reload
 # download script
 cd /usr/sbin
-wget -O clearcache "https://raw.githubusercontent.com/FanoraSsh/v/main/menu/clearcache.sh"
-wget -O delete "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/delete.sh"
-wget -O autokill "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/tendang.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/FanoraSsh/v/main/xray/certv2ray.sh"
-wget -O menu-webmin "https://raw.githubusercontent.com/FanoraSsh/v/main/menu/menu-webmin.sh"
-wget -O speedtest "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/FanoraSsh/v/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/FanoraSsh/v/main/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/FanoraSsh/v/main/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/FanoraSsh/v/main/menu/bw.sh"
-wget -O xp "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/xp.sh"
-wget -O acs-set "https://raw.githubusercontent.com/FanoraSsh/v/main/acs-set.sh"
-wget -O sshws "https://raw.githubusercontent.com/FanoraSsh/v/main/ssh/sshws.sh"
-wget -O status "https://raw.githubusercontent.com/FanoraSsh/v/main/status.sh"
-wget -O jam "https://raw.githubusercontent.com/FanoraSsh/v/main/jam.sh"
-wget -O dmenu "https://raw.githubusercontent.com/FanoraSsh/a/main/menu/dmenu.sh"
-wget -O menu "https://raw.githubusercontent.com/FanoraSsh/a/main/menu/menu.sh"
-wget -O nsmenu "https://raw.githubusercontent.com/FanoraSsh/a/main/menu/nsmenu.sh"
-wget -O pubkey "https://raw.githubusercontent.com/FanoraSsh/a/main/menu/pubkey.sh"
+wget -O clearcache "https://raw.githubusercontent.com/fanoraprem/v/main/menu/clearcache.sh"
+wget -O delete "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/delete.sh"
+wget -O autokill "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/tendang.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/fanoraprem/v/main/xray/certv2ray.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/fanoraprem/v/main/menu/menu-webmin.sh"
+wget -O speedtest "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/speedtest_cli.py"
+wget -O about "https://raw.githubusercontent.com/fanoraprem/v/main/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/fanoraprem/v/main/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/fanoraprem/v/main/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/fanoraprem/v/main/menu/bw.sh"
+wget -O xp "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/xp.sh"
+wget -O acs-set "https://raw.githubusercontent.com/fanoraprem/v/main/acs-set.sh"
+wget -O sshws "https://raw.githubusercontent.com/fanoraprem/v/main/ssh/sshws.sh"
+wget -O status "https://raw.githubusercontent.com/fanoraprem/v/main/status.sh"
+wget -O jam "https://raw.githubusercontent.com/fanoraprem/v/main/jam.sh"
+wget -O dmenu "https://raw.githubusercontent.com/fanoraprem/a/main/menu/dmenu.sh"
+wget -O menu "https://raw.githubusercontent.com/fanoraprem/a/main/menu/menu.sh"
+wget -O nsmenu "https://raw.githubusercontent.com/fanoraprem/a/main/menu/nsmenu.sh"
+wget -O pubkey "https://raw.githubusercontent.com/fanoraprem/a/main/menu/pubkey.sh"
 wget -O backup "https://raw.githubusercontent.com/FanoraSsh/a/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/FanoraSsh/a/main/backup/restore.sh"
 wget -O bmenu "https://raw.githubusercontent.com/FanoraSsh/a/main/menu/menu-bckp.sh"
